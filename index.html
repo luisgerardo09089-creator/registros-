@@ -6,6 +6,7 @@
   <title>Registro de Usuario</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -27,12 +28,14 @@
       padding:20px;
     }
 
+    /* LOGO */
     .logo{
       width:120px;
       height:120px;
       border-radius:50%;
-      margin-bottom:10px;
       border:4px solid white;
+      margin-bottom:10px;
+      object-fit:cover;
     }
 
     main{
@@ -49,9 +52,10 @@
       max-width:400px;
       padding:25px;
       border-radius:10px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+      box-shadow:0px 4px 10px rgba(0,0,0,0.2);
     }
 
+    /* IMAGEN DE PERFIL */
     .perfil{
       width:120px;
       height:120px;
@@ -82,10 +86,10 @@
       margin-top:20px;
       padding:12px;
       border:none;
+      border-radius:5px;
       background:#4a90e2;
       color:white;
       font-size:16px;
-      border-radius:5px;
       cursor:pointer;
     }
 
@@ -100,7 +104,9 @@
       padding:15px;
     }
 
+    /* RESPONSIVO */
     @media(max-width:600px){
+
       .contenedor{
         padding:15px;
       }
@@ -108,41 +114,53 @@
       header h1{
         font-size:22px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
 
     <!-- LOGO -->
+    <!-- La imagen logo.png debe estar en la misma carpeta -->
     <img 
-      class="logo"
       src="registro.png"
-      alt="Logo Registro">
+      alt="Logo Registro"
+      class="logo">
 
     <h1>Registro de Usuario</h1>
 
   </header>
 
+  <!-- MAIN -->
   <main>
 
     <div class="contenedor">
 
-      <!-- IMAGEN DE PERFIL -->
+      <!-- FOTO PERFIL -->
       <img 
-        class="perfil"
         src="https://via.placeholder.com/120"
-        alt="Perfil">
+        alt="Foto de Perfil"
+        class="perfil">
 
+      <!-- FORMULARIO -->
       <form>
 
         <label>Nombre Completo</label>
-        <input type="text" placeholder="Ingresa tu nombre" required>
+        <input 
+          type="text"
+          placeholder="Ingresa tu nombre"
+          required>
 
         <label>Correo Electrónico</label>
-        <input type="email" placeholder="correo@gmail.com" required>
+        <input 
+          type="email"
+          placeholder="correo@gmail.com"
+          required>
 
         <label>Contraseña</label>
         <input 
@@ -152,14 +170,20 @@
           required>
 
         <label>Fecha de Nacimiento</label>
-        <input type="date" required>
+        <input 
+          type="date"
+          required>
 
         <label>Color Favorito</label>
-        <input type="color">
+        <input 
+          type="color">
 
         <label>País</label>
-        <input list="paises" placeholder="Selecciona tu país">
+        <input 
+          list="paises"
+          placeholder="Selecciona tu país">
 
+        <!-- DATALIST -->
         <datalist id="paises">
           <option value="México">
           <option value="Argentina">
@@ -169,7 +193,9 @@
           <option value="Perú">
         </datalist>
 
-        <button type="submit">Registrarse</button>
+        <button type="submit">
+          Registrarse
+        </button>
 
       </form>
 
@@ -177,6 +203,7 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>Proyecto Final - GitHub Pages</p>
   </footer>
